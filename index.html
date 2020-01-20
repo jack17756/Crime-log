@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<head>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+         integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+         crossorigin=""/>
+
+        <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+         integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+         crossorigin=""></script>
+    
+    <style>
+        
+        .header {
+            text-align: center;
+        }
+        
+        .map-box {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        #crime-log {
+            height: 500px;
+            width: 700px;
+        }
+        
+    </style>
+
+</head>
+
+<body>
+
+<div class = "header">
+    <h1>Crime-Log</h1>
+</div>
+
+<div class = "map-box">
+    <div id="crime-log"></div>
+</div>
+    <script>
+        let mymap = L.map('crime-log', {
+            maxZoom: 17,
+            minZoom: 15,
+            zoom: 15,
+        }).setView([38.899108, -77.045780]);
+
+        // Marker for November, 2019 Crimes
+
+        let marker06 = L.marker([38.897104, -77.044338]).addTo(mymap);
+        let marker08 = L.marker([38.897384, -77.049363]).addTo(mymap);
+        let marker13 = L.marker([38.898086, -77.050390]).addTo(mymap);
+        let marker20 = L.marker([38.898703, -77.033235]).addTo(mymap);
+        let marker43 = L.marker([38.900559, -77.047927]).addTo(mymap);
+        // let marker47 = L.marker([38.900559, -77.047927]).addTo(mymap);
+
+        // Blurb for November, 2019 Crimes 
+
+        marker06.bindPopup(
+            "<b>Destruction of Fixtures/Vandalism</b><br>1/2/2020<br>Closed. Subject barred.<br>Location: 1922 F Street"
+        );
+        marker08.bindPopup(
+            "<b>Extortion</b><br>1/2/2020 - 9:45 a.m.<br>Closed. Referred to DSA.<br>Location: 2208 F Street"
+        );
+        marker13.bindPopup(
+            "<b>Theft II/ From Building</b><br>1/3/2020 - 2:15 p.m.<br>Closed. Subject barred.<br>Location: Shenkman Hall"
+        );
+        marker20.bindPopup(
+            "<b>Sexual Assault</b><br>1/4/2020 - 4:20 a.m.<br>Closed. Referred to MPD.<br>Location: 2300 Block of G Street. N.W."
+        );
+        marker43.bindPopup(
+            "<b>Sexual Assault</b><br>1/4/2020 - 4:20 a.m.<br>Closed. Referred to MPD.<br>Location: 2300 Block of G Street. N.W."
+        );
+        
+
+        
+        L.control.scale().addTo(mymap);
+        
+        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+        '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+        'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        id: 'mapbox.streets'
+        }).addTo(mymap);
+
+    </script>
+
+</body>
