@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <head>
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
-         integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-         crossorigin=""/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin=""/>
 
-        <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
-         integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
-         crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+    integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+    crossorigin=""></script>
     
     <style>
-        
+
         .header {
             text-align: center;
         }
@@ -31,13 +31,13 @@
 
 <body>
 
-<div class = "header">
-    <h1>Crime-Log</h1>
-</div>
+    <div class = "header">
+        <h1>Crime-Log</h1>
+    </div>
 
-<div class = "map-box">
-    <div id="crime-log"></div>
-</div>
+    <div class = "map-box">
+        <div id="crime-log"></div>
+    </div>
     <script>
         let mymap = L.map('crime-log', {
             maxZoom: 17,
@@ -50,7 +50,7 @@
         let marker06 = L.marker([38.897104, -77.044338]).addTo(mymap);
         let marker08 = L.marker([38.897384, -77.049363]).addTo(mymap);
         let marker13 = L.marker([38.898086, -77.050390]).addTo(mymap);
-        let marker20 = L.marker([38.898703, -77.033235]).addTo(mymap);
+        let marker18 = L.marker([38.898703, -77.033235]).addTo(mymap);
         let marker43 = L.marker([38.900559, -77.047927]).addTo(mymap);
         // let marker47 = L.marker([38.900559, -77.047927]).addTo(mymap);
 
@@ -58,29 +58,73 @@
 
         marker06.bindPopup(
             "<b>Destruction of Fixtures/Vandalism</b><br>1/2/2020<br>Closed. Subject barred.<br>Location: 1922 F Street"
-        );
+            );
         marker08.bindPopup(
             "<b>Extortion</b><br>1/2/2020 - 9:45 a.m.<br>Closed. Referred to DSA.<br>Location: 2208 F Street"
-        );
+            );
         marker13.bindPopup(
             "<b>Theft II/ From Building</b><br>1/3/2020 - 2:15 p.m.<br>Closed. Subject barred.<br>Location: Shenkman Hall"
-        );
-        marker20.bindPopup(
+            );
+        marker18.bindPopup(
             "<b>Sexual Assault</b><br>1/4/2020 - 4:20 a.m.<br>Closed. Referred to MPD.<br>Location: 2300 Block of G Street. N.W."
-        );
+            );
         marker43.bindPopup(
             "<b>Sexual Assault</b><br>1/4/2020 - 4:20 a.m.<br>Closed. Referred to MPD.<br>Location: 2300 Block of G Street. N.W."
-        );
-        
+            );
+        marker47.bindPopup(
+            "<b>Robbery, Threats to do Bodily Harm, Destruction of Property/Vandalism</b><br>1/09/2020 - 6:54 a.m.<br>Closed. Subject arrested.<br>Location: Ross Hall"
+            );
+        marker59.bindPopup(
+            "<b>Assault on a Police Officer-Misdemeanor</b><br>1/09/2020 - 6:54 a.m.<br>Closed. Subject arrested.<br>Location: Public Property on Campus (900 Block of 23rd Street)"
+            );
+        marker65.bindPopup(
+            "<b>Theft II/ From Building</b><br>1/10/2020<br>Open case.<br>Location: 2125 G Street, N.W. (Building GG)"
+            );
+        marker66.bindPopup(
+            "<b>Robbery Pick Pocket, Credit Card Fraud</b><br>1/10/2020 - 11:15 a.m. to 12:00 p.m.<br>Open case.<br>Location: 2000 Pennsylvania Avenue, N.W."
+            );
+        marker89.bindPopup(
+            "<b>Theft II/Other</b><br>1/11/2020 - 9:20 p.m.<br>Open case.<br>Location: Science and Engineering Hall (Garage)"
+            );
+        marker92.bindPopup(
+            "<b>Liquor Law Violation</b><br>1/12/2020 - 2:58 a.m.<br>Closed. Referred to DSA.<br>Location: JBKO Hall"
+            );
+        marker97.bindPopup(
+            "<b>Drug Law Violation</b><br>1/12/2020 - 5:51 a.m.<br>Closed. Referred to DSA.<br>Location: Madison Hall"
+            );
+        marker103.bindPopup(
+            "<b>Destruction of Property/Vandalism, Theft II/From Motor Vehicle</b><br>1/12/2020 - 6:30 p.m. to 11:00 p.m.<br>Closed. Referred to MPD.<br>Location: Public Property On Campus (2100 Block of H Street N.W.)"
+            );
+        marker105.bindPopup(
+            "<b>Liquor Law Violation</b><br>1/13/2020 - 1:32 a.m.<br>Closed. Referred to DSA.<br>Location: Guthridge Hall"
+            );
+        marker110.bindPopup(
+            "<b>Theft II/From Building</b><br>1/8/2020<br>Open case.<br>Location: Burns Law School"
+            );
+        marker128.bindPopup(
+            "<b>Destruction of Property/Vandalism</b><br>1/14/2020<br>Open case.<br>Location: Science and Engineering Hall (Garage)"
+            );
+        marker151.bindPopup(
+            "<b>Theft II/From Building</b><br>1/15/2020<br>Open case.<br>Location: Corcoran Hall"
+            );
+        marker154.bindPopup(
+            "<b>Theft II/From Motor Vehicle, Unlawful Entry of a Motor Vehicle</b><br>1/15/2020 - 7:45 a.m. to 9:30 a.m.<br>Open case.<br>Location: Public Property on Campus (600 Block of 23rd Street)"
+            );
+        marker181.bindPopup(
+            "<b>Public Drunkeness</b><br>1/16/2020 - 4:11 p.m.<br>Closed. Subject barred.<br>Location: Townhouse Row (600 Block of 23rd Street)"
+            );
+        marker184.bindPopup(
+            "<b>Liquor Law Violation</b><br>1/16/2020 - 8:30 p.m.<br>Closed. Referred to DSA.<br>Location: P. Amsterdam Hall"
+            );
 
         
         L.control.scale().addTo(mymap);
         
         L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
-        '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-        'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-        id: 'mapbox.streets'
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+            '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+            'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            id: 'mapbox.streets'
         }).addTo(mymap);
 
     </script>
